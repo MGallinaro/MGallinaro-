@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Distributed Wearable Device: patch anulare in silicone con fibra ottica a spirale interrogata in OFDR, per il monitoraggio della superficie mammaria.">
+<title>Distributed Wearable Device — Marco Gallinaro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<nav class="top">
+  <a class="name" href="../index.html">Marco Gallinaro</a>
+  <div class="links">
+    <a href="../chi-sono.html">Chi sono</a>
+    <a href="../progetti.html" class="is-active">Progetti</a>
+    <a href="../pubblicazioni.html">Pubblicazioni</a>
+    <a href="../contatti.html">Contatti</a>
+  </div>
+</nav>
+
+<header class="page-head wrap">
+  <a class="back-link" href="../progetti.html">← Tutti i progetti</a>
+  <p class="eyebrow" style="margin-top:18px;">Progetto · In revisione, Sensors and Actuators Reports</p>
+  <h1>Distributed Wearable Device</h1>
+  <p class="dek">Una patch anulare in silicone indossabile, pensata per il monitoraggio della superficie mammaria. Una fibra ottica disposta a spirale di Archimede viene interrogata via OFDR, creando centinaia di punti di sensing distribuiti capaci di rilevare forza e temperatura in modo localizzato su tutta la superficie del dispositivo.</p>
+</header>
+
+<section class="tight">
+  <p class="eyebrow">Scheda tecnica</p>
+  <div class="about-grid">
+    <div>
+      <p>Il layout a spirale non è arbitrario: riprende la distribuzione delle tensioni tipica delle ragnatele (meccanica di Lott et al.), usata qui per giustificare in chiave bio-ispirata la sensibilità posizione-dipendente osservata sperimentalmente lungo la fibra.</p>
+      <p>Il lavoro è stato riconosciuto con il Best Paper Award a IEEE MetroInd 2026, ed è attualmente in revisione presso <em>Sensors and Actuators Reports</em>.</p>
+    </div>
+    <div class="skills">
+      <div class="item"><b>Interrogazione</b>OFDR</div>
+      <div class="item"><b>Layout fibra</b>Spirale di Archimede</div>
+      <div class="item"><b>Grandezze misurate</b>Forza, temperatura</div>
+      <div class="item"><b>Stato</b>In revisione</div>
+    </div>
+  </div>
+</section>
+
+<section class="tight">
+  <p class="eyebrow">Report completo</p>
+  <h2>Documento del progetto</h2>
+  <div class="report-block">
+    <div class="report-actions">
+      <a class="btn" href="dwd-report.pdf" download>⬇ Scarica il PDF</a>
+      <a class="btn" href="dwd-report.pdf" target="_blank" rel="noopener">Apri in una scheda separata ↗</a>
+    </div>
+    <iframe class="pdf-frame" src="dwd-report.pdf" title="Report PDF — Distributed Wearable Device">
+      <p class="pdf-fallback">Il tuo browser non supporta l'anteprima integrata dei PDF. <a href="dwd-report.pdf">Scarica il report</a> per leggerlo.</p>
+    </iframe>
+  </div>
+</section>
+
+<footer>
+  <span>Marco Gallinaro — DOFS &amp; biomedical instrumentation</span>
+  <span id="year"></span>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
