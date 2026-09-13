@@ -240,6 +240,58 @@ section h2{font-size:clamp(1.5rem, 3vw, 1.9rem);margin-bottom:22px;}
 }
 .skills .item b{color:var(--ink);font-weight:500;display:block;font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent-ink);margin-bottom:3px;}
 
+/* ---------- home: chi sono (photo + bio + cv) ---------- */
+.bio-grid{
+  display:grid;
+  grid-template-columns:minmax(180px,240px) minmax(0,1fr);
+  gap:44px;
+  align-items:start;
+}
+.bio-photo{
+  aspect-ratio:3/4;
+  background:var(--bg-raised);
+  border:1px solid var(--line);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.bio-text p{color:var(--ink-muted);}
+.bio-text p + p{margin-top:16px;}
+.bio-text strong{color:var(--ink);font-weight:600;}
+.cv-action{margin-top:24px;}
+
+/* ---------- home: hard/soft skills columns ---------- */
+.skills-columns{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:48px;
+  margin-top:40px;
+  padding-top:32px;
+  border-top:1px solid var(--line);
+}
+.skills-col-title{
+  font-family:"IBM Plex Mono", monospace;
+  font-size:11px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--accent-ink);
+  margin-bottom:14px;
+}
+.skills-list{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+}
+.skills-list li{
+  padding-block:10px;
+  border-bottom:1px solid var(--line);
+  color:var(--ink-muted);
+  font-size:0.95rem;
+}
+.skills-list li.placeholder{color:var(--ink-faint);font-style:italic;}
+
 /* ---------- home: stat grid ---------- */
 .stat-grid{
   display:grid;
@@ -551,6 +603,9 @@ footer{
   .projects{grid-template-columns:1fr;}
   .stat-grid{grid-template-columns:1fr 1fr;}
   .feature-grid{grid-template-columns:1fr;}
+  .bio-grid{grid-template-columns:1fr;}
+  .bio-photo{max-width:220px;}
+  .skills-columns{grid-template-columns:1fr;gap:28px;}
   nav.top .links{gap:16px;}
   .pdf-frame{height:70vh;}
 }
