@@ -240,6 +240,75 @@ section h2{font-size:clamp(1.5rem, 3vw, 1.9rem);margin-bottom:22px;}
 }
 .skills .item b{color:var(--ink);font-weight:500;display:block;font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent-ink);margin-bottom:3px;}
 
+/* ---------- home: stat grid ---------- */
+.stat-grid{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:1px;
+  background:var(--line);
+  border:1px solid var(--line);
+}
+.stat{
+  background:var(--bg);
+  padding:22px 20px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.stat-value{
+  font-family:"Libre Caslon Display", serif;
+  font-size:1.2rem;
+  line-height:1.25;
+  color:var(--ink);
+}
+.stat-label{
+  font-family:"IBM Plex Mono", monospace;
+  font-size:10.5px;
+  letter-spacing:0.04em;
+  text-transform:uppercase;
+  color:var(--ink-faint);
+}
+
+/* ---------- home: featured project ---------- */
+.feature-grid{
+  display:grid;
+  grid-template-columns:minmax(200px,320px) minmax(0,1fr);
+  gap:40px;
+  align-items:stretch;
+}
+.feature-media{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  aspect-ratio:4/3;
+  background:var(--bg-raised);
+  border:1px solid var(--line);
+  text-decoration:none;
+}
+.feature-body{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  justify-content:center;
+}
+.feature-body .tag{
+  align-self:flex-start;
+  font-family:"IBM Plex Mono", monospace;
+  font-size:10.5px;
+  letter-spacing:0.05em;
+  text-transform:uppercase;
+  padding:4px 8px;
+  border-radius:3px;
+  background:var(--bg-raised);
+  color:var(--ink-muted);
+  border:1px solid var(--line-strong);
+}
+.feature-body .tag.status-review{color:var(--accent-ink);border-color:var(--accent);}
+.feature-body h3{font-size:1.5rem;line-height:1.2;}
+.feature-body p{color:var(--ink-muted);max-width:58ch;}
+.feature-body p em{color:var(--ink);font-style:italic;}
+.feature-links{display:flex;gap:22px;flex-wrap:wrap;margin-top:2px;}
+
 /* ---------- projects grid + cards ---------- */
 .projects{
   display:grid;
@@ -330,6 +399,19 @@ a.card:hover h3, a.card:focus-visible h3{color:var(--accent-ink);}
   color:var(--ink-faint);
   font-style:italic;
 }
+
+.open-link{
+  font-family:"IBM Plex Mono", monospace;
+  font-size:11px;
+  letter-spacing:0.04em;
+  text-transform:uppercase;
+  text-decoration:none;
+  color:var(--accent-ink);
+  border-bottom:1px solid transparent;
+  padding-bottom:2px;
+  transition:border-color .15s ease;
+}
+.open-link:hover, .open-link:focus-visible{border-color:var(--accent-ink);}
 
 .card .open-link{
   margin-top:auto;
@@ -467,6 +549,8 @@ footer{
 @media (max-width: 760px){
   .about-grid{grid-template-columns:1fr;}
   .projects{grid-template-columns:1fr;}
+  .stat-grid{grid-template-columns:1fr 1fr;}
+  .feature-grid{grid-template-columns:1fr;}
   nav.top .links{gap:16px;}
   .pdf-frame{height:70vh;}
 }
