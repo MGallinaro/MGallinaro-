@@ -4,35 +4,76 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Progetti di Marco Gallinaro su distributed optical fiber sensing (DOFS), OFDR e strumentazione biomedicale.">
-<title>Progetti — Marco Gallinaro</title>
+<title>Progetti &mdash; Marco Gallinaro</title>
+<link rel="canonical" href="https://DA-SOSTITUIRE.example/progetti.html">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png"><link rel="shortcut icon" href="assets/apple-touch-icon.png">
+<meta property="og:title" content="Progetti &mdash; Marco Gallinaro">
+<meta property="og:description" content="Progetti di Marco Gallinaro su distributed optical fiber sensing (DOFS), OFDR e strumentazione biomedicale.">
+<meta property="og:image" content="https://DA-SOSTITUIRE.example/assets/favicon.svg">
+<meta property="og:url" content="https://DA-SOSTITUIRE.example/progetti.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Progetti &mdash; Marco Gallinaro">
+<meta name="twitter:description" content="Progetti di Marco Gallinaro su distributed optical fiber sensing (DOFS), OFDR e strumentazione biomedicale.">
+<meta name="twitter:image" content="https://DA-SOSTITUIRE.example/assets/favicon.svg">
+<meta name="twitter:url" content="https://DA-SOSTITUIRE.example/progetti.html">
+<script defer data-domain="DA-SOSTITUIRE.example" src="https://plausible.io/js/script.js"></script>
+<script src="assets/theme-toggle.js"></script>
+<script defer src="assets/language-toggle.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="assets/site.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="assets/material-overrides.css">
+
+
 </head>
 <body>
 
-<nav class="top">
-  <a class="name" href="index.html">Marco Gallinaro</a>
-  <div class="links">
-    <a href="progetti.html" class="is-active">Progetti</a>
-    <a href="pubblicazioni.html">Pubblicazioni</a>
-    <a href="contatti.html">Contatti</a>
+<a class="skip-link" href="#progetti">Vai al contenuto</a>
+
+<nav class="top app-bar" aria-label="Navigazione principale">
+  <div class="nav-shell">
+    <a class="brand-logo" href="index.html">Marco Gallinaro</a>
+    <a href="#mobile-nav" data-target="mobile-nav" class="sidenav-trigger" aria-label="Apri il menu" aria-expanded="false"><i class="material-icons">menu</i></a>
+    <div class="links">
+      <a href="progetti.html" class="is-active">Progetti</a>
+      <a href="pubblicazioni.html">Pubblicazioni</a>
+      <a href="contatti.html">Contatti</a>
+    </div>
+    <button class="theme-toggle" type="button" aria-label="Attiva tema scuro" title="Attiva tema scuro" aria-pressed="false">
+      <span class="theme-icon theme-icon-sun material-icons" aria-hidden="true">light_mode</span>
+      <span class="theme-icon theme-icon-moon material-icons" aria-hidden="true">dark_mode</span>
+    </button>
+    <div class="language-toggle" role="group" aria-label="Seleziona lingua">
+      <button type="button" data-language="it" aria-pressed="true">IT</button>
+      <button type="button" data-language="en" aria-pressed="false">EN</button>
+    </div>
   </div>
 </nav>
+<ul class="sidenav" id="mobile-nav">
+  <li><a href="index.html"><i class="material-icons">home</i>&larr; Home</a></li>
+  <li><a href="progetti.html"><i class="material-icons">science</i>Progetti</a></li>
+  <li><a href="pubblicazioni.html"><i class="material-icons">menu_book</i>Pubblicazioni</a></li>
+  <li><a href="contatti.html"><i class="material-icons">mail</i>Contatti</a></li>
+</ul>
+
+<main>
 
 <header class="page-head wrap">
-  <a class="back-link" href="index.html">← Home</a>
-  <p class="eyebrow" style="margin-top:18px;">Progetti</p>
+  <a class="back-link" href="index.html">&larr; Home</a>
+  <p class="eyebrow page-head-eyebrow">Progetti</p>
   <h1>Tre linee di lavoro, un unico principio: la fibra come sensore continuo.</h1>
   <p class="dek">Dal dispositivo indossabile alla pipeline di analisi, ogni progetto usa una singola fibra ottica interrogata via OFDR per generare centinaia di punti di misura distribuiti. Apri un progetto per i dettagli e, dove disponibile, il report completo in PDF.</p>
 </header>
 
-<section class="tight">
+<section id="progetti" class="tight">
   <div class="projects">
     <a class="card" href="distributed-wearable-device.html">
-      <div class="card-media">
-        <span class="media-placeholder">[AGGIUNGI IMMAGINE]</span>
+      <div class="card-media project-visual project-visual-wearable" aria-hidden="true">
+        <span class="project-glyph">◌</span>
       </div>
       <div class="card-body">
         <span class="tag status-review">In revisione</span>
@@ -45,12 +86,12 @@
           <span class="field-label">Main challenges</span>
           <p class="placeholder">[AGGIUNGI TESTO]</p>
         </div>
-        <span class="open-link">Apri progetto · report PDF →</span>
+        <span class="open-link">Apri progetto &middot; report PDF &rarr;</span>
       </div>
     </a>
     <a class="card" href="dottorato-dofs.html">
-      <div class="card-media">
-        <span class="media-placeholder">[AGGIUNGI IMMAGINE]</span>
+      <div class="card-media project-visual project-visual-phd" aria-hidden="true">
+        <span class="project-glyph">∑</span>
       </div>
       <div class="card-body">
         <span class="tag">Proposta</span>
@@ -63,12 +104,12 @@
           <span class="field-label">Main challenges</span>
           <p class="placeholder">[AGGIUNGI TESTO]</p>
         </div>
-        <span class="open-link">Apri progetto →</span>
+        <span class="open-link">Apri progetto &rarr;</span>
       </div>
     </a>
     <a class="card" href="pipeline-dsm.html">
-      <div class="card-media">
-        <span class="media-placeholder">[AGGIUNGI IMMAGINE]</span>
+      <div class="card-media project-visual project-visual-pipeline" aria-hidden="true">
+        <span class="project-glyph">⌁</span>
       </div>
       <div class="card-body">
         <span class="tag">In corso</span>
@@ -81,17 +122,23 @@
           <span class="field-label">Main challenges</span>
           <p class="placeholder">[AGGIUNGI TESTO]</p>
         </div>
-        <span class="open-link">Apri progetto →</span>
+        <span class="open-link">Apri progetto &rarr;</span>
       </div>
     </a>
   </div>
 </section>
 
+</main>
+
+<button class="back-to-top" type="button" aria-label="Torna su" title="Torna su">↑</button>
+
 <footer>
-  <span>Marco Gallinaro — DOFS &amp; biomedical instrumentation</span>
+  <span>Marco Gallinaro &mdash; DOFS &amp; biomedical instrumentation</span>
   <span id="year"></span>
 </footer>
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+<script src="assets/interactions.js"></script>
 </body>
 </html>
