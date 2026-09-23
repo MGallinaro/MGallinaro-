@@ -71,9 +71,9 @@
       '.affiliations .chip:nth-child(3)': { it: 'MSc Ingegneria Biomedica', en: 'MSc Biomedical Engineering' },
       '.bio-photo .media-placeholder': { it: '[AGGIUNGI FOTO]', en: '[PHOTO TO BE ADDED]' },
       '.skills-col:nth-child(1) .skills-list': {
-            it: '<li><strong>Programmazione e analisi dati:</strong> MATLAB, Python, Simulink</li><li><strong> Progettazione:</strong> Fusion 360, Eagle</li><li><strong>Metodi sperimentali:</strong> sistemi di interrogazione in fibra ottica, prove meccaniche (Instron), caratterizzazione termica e meccanica, test su phantom</li><li><strong>Tecnologie di sensing:</strong> FBG, DOFS</li>',
-            en: '<li><strong>Programming &amp; Data Analysis:</strong> MATLAB, Python, Simulink</li><li><strong> Design:</strong> Fusion 360, Eagle</li><li><strong>Experimental Methods:</strong> optical fiber interrogation systems, mechanical testing (Instron), thermal/mechanical characterization, phantom-based testing</li><li><strong>Sensing Technologies:</strong> FBG, DOFS</li>'
-          },
+          it: '<li><strong>Programmazione e analisi dati:</strong> MATLAB, Python, Simulink</li><li><strong>Progettazione CAD e PCB:</strong> Fusion 360, Eagle</li><li><strong>Metodi sperimentali:</strong> sistemi di interrogazione in fibra ottica, prove meccaniche (Instron), caratterizzazione termica e meccanica, test su phantom</li><li><strong>Tecnologie di sensing:</strong> FBG, DOFS, IMU, encoder</li>',
+          en: '<li><strong>Programming &amp; Data Analysis:</strong> MATLAB, Python, Simulink</li><li><strong>CAD &amp; PCB Design:</strong> Fusion 360, Eagle</li><li><strong>Experimental Methods:</strong> optical fiber interrogation systems, mechanical testing (Instron), thermal/mechanical characterization, phantom-based testing</li><li><strong>Sensing Technologies:</strong> FBG, DOFS, IMU, encoder</li>'
+        },
           '.skills-col:nth-child(2) .skills-list': {
             it: '<li>Coordinamento del team</li><li>Gestione del tempo</li><li>Comunicazione efficace</li><li>Gestione del budget</li><li>Pensiero critico</li><li>Problem solving</li><li>Lavoro in autonomia</li>',
             en: '<li>Team Coordination</li><li>Time Management</li><li>Effective Communication</li><li>Budget Management</li><li>Critical Thinking</li><li>Problem Solving</li><li>Independent Work</li>'
