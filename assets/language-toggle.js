@@ -70,7 +70,14 @@
       '#chi-sono h2': { it: 'Sensori su misura, dal prototipo al dato.', en: 'Sensors built for the job, from prototype to data.' },
       '.affiliations .chip:nth-child(3)': { it: 'MSc Ingegneria Biomedica', en: 'MSc Biomedical Engineering' },
       '.bio-photo .media-placeholder': { it: '[AGGIUNGI FOTO]', en: '[PHOTO TO BE ADDED]' },
-      '.skills-col:nth-child(2) .placeholder': { it: '[AGGIUNGI TESTO]', en: '[TEXT TO BE ADDED]' },
+      '.skills-col:nth-child(1) .skills-list': {
+          it: '<li><strong>Programmazione e analisi dati:</strong> MATLAB, Python, Simulink</li><li><strong>Simulazione e progettazione:</strong> COMSOL Multiphysics, Fusion 360, Eagle</li><li><strong>Metodi sperimentali:</strong> sistemi di interrogazione in fibra ottica, prove meccaniche (Instron), caratterizzazione termica e meccanica, test su phantom</li><li><strong>Tecnologie di sensing:</strong> FBG, DOFS</li>',
+          en: '<li><strong>Programming &amp; Data Analysis:</strong> MATLAB, Python, Simulink</li><li><strong>Simulation &amp; Design:</strong> COMSOL Multiphysics, Fusion 360, Eagle</li><li><strong>Experimental Methods:</strong> optical fiber interrogation systems, mechanical testing (Instron), thermal/mechanical characterization, phantom-based testing</li><li><strong>Sensing Technologies:</strong> FBG, DOFS</li>'
+        },
+        '.skills-col:nth-child(2) .skills-list': {
+          it: '<li>Coordinamento del team</li><li>Gestione del tempo</li><li>Comunicazione efficace</li><li>Gestione del budget</li><li>Pensiero critico</li><li>Problem solving</li><li>Lavoro in autonomia</li>',
+          en: '<li>Team Coordination</li><li>Time Management</li><li>Effective Communication</li><li>Budget Management</li><li>Critical Thinking</li><li>Problem Solving</li><li>Independent Work</li>'
+        },
       '.trace-cap span:nth-child(1)': { it: 'Traccia illustrativa — non dati sperimentali', en: 'Illustrative trace — not experimental data' },
       '.trace-cap span:nth-child(2)': { it: 'Modulo DSM monoassiale · risoluzione spaziale ~1.3–2.6 mm', en: 'Uniaxial DSM module · ~1.3–2.6 mm spatial resolution' },
       '.trace-cap span:nth-child(3)': { it: '0–200 mm · ~155 punti di sensing', en: '0–200 mm · ~155 sensing points' },
