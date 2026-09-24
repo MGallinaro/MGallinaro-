@@ -24,7 +24,7 @@
     },
     'distributed-wearable-device.html': {
       title: { it: 'A Bioinspired Distributed Optical Fiber Sensing Device for Wearable Thermomechanical Monitoring of Breast Tissue — Marco Gallinaro', en: 'A Bioinspired Distributed Optical Fiber Sensing Device for Wearable Thermomechanical Monitoring of Breast Tissue — Marco Gallinaro' },
-      description: { it: 'Distributed Wearable Device e sensing a fibra ottica interrogato in OFDR.', en: 'Distributed Wearable Device and OFDR-interrogated optical fiber sensing.' }
+      description: { it: 'A Bioinspired Distributed Optical Fiber Sensing Device for Wearable Thermomechanical Monitoring of Breast Tissue', en: 'A Bioinspired Distributed Optical Fiber Sensing Device for Wearable Thermomechanical Monitoring of Breast Tissue' }
     },
     'dottorato-dofs.html': {
       title: { it: 'Dottorato in DOFS biomedicale — Marco Gallinaro', en: 'Biomedical DOFS PhD proposal — Marco Gallinaro' },
@@ -123,7 +123,7 @@
       '.page-head h1': { it: 'Note bibliografiche.', en: 'Bibliographic notes.' },
       '.back-link': { it: '← Home', en: '← Home' },
       '.entry:first-child > span:last-child': { it: 'Best Paper Award — <span class="venue">IEEE International Workshop on Metrology for Industry 4.0 & IoT (MetroInd)</span>, per il lavoro sul Distributed Wearable Device.<span class="meta">Premio · 2026</span>', en: 'Best Paper Award — <span class="venue">IEEE International Workshop on Metrology for Industry 4.0 & IoT (MetroInd)</span>, for the Distributed Wearable Device project.<span class="meta">Award · 2026</span>' },
-      '.entry:nth-child(2) > span:last-child': { it: 'Distributed Wearable Device per il monitoraggio della superficie mammaria tramite fibra ottica a spirale interrogata in OFDR. <span class="venue">Sensors and Actuators Reports</span>.<span class="meta">In revisione</span>', en: 'Distributed Wearable Device for monitoring the breast surface with an OFDR-interrogated spiral optical fiber. <span class="venue">Sensors and Actuators Reports</span>.<span class="meta">Under review</span>' }
+      '.entry:nth-child(2) > span:last-child': { it: 'A Bioinspired Distributed Optical Fiber Sensing Device for Wearable Thermomechanical Monitoring of Breast Tissue <span class="venue">Sensors and Actuators Reports</span>.<span class="meta">In revisione</span>', en: 'Distributed Wearable Device for monitoring the breast surface with an OFDR-interrogated spiral optical fiber. <span class="venue">Sensors and Actuators Reports</span>.<span class="meta">Under review</span>' }
     },
     'contatti.html': {
       '.page-head-eyebrow': { it: 'Contatti', en: 'Contact' },
@@ -227,8 +227,8 @@
       : 'Traccia illustrativa di backscattering OFDR lungo una fibra sensorizzata');
     var reportFrame = document.querySelector('.pdf-frame');
     if (reportFrame) reportFrame.setAttribute('title', language === 'en'
-      ? 'PDF report — Distributed Wearable Device'
-      : 'Report PDF — Distributed Wearable Device');
+      ? 'PDF report — A Bioinspired Distributed Optical Fiber Sensing Device for Wearable Thermomechanical Monitoring of Breast Tissue'
+      : 'Report PDF — A Bioinspired Distributed Optical Fiber Sensing Device for Wearable Thermomechanical Monitoring of Breast Tissue');
     document.querySelectorAll('.gages circle[data-position]').forEach(function (point) {
       point.setAttribute('aria-label', language === 'en'
         ? 'Sensing point at ' + point.getAttribute('data-position')
