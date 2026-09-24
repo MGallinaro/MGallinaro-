@@ -23,7 +23,7 @@
       description: { it: 'Contatti di Marco Gallinaro.', en: 'Contact Marco Gallinaro.' }
     },
     'distributed-wearable-device.html': {
-      title: { it: 'Distributed Wearable Device — Marco Gallinaro', en: 'Distributed Wearable Device — Marco Gallinaro' },
+      title: { it: 'A Bioinspired Distributed Optical Fiber Sensing Device for Wearable Thermomechanical Monitoring of Breast Tissue — Marco Gallinaro', en: 'A Bioinspired Distributed Optical Fiber Sensing Device for Wearable Thermomechanical Monitoring of Breast Tissue — Marco Gallinaro' },
       description: { it: 'Distributed Wearable Device e sensing a fibra ottica interrogato in OFDR.', en: 'Distributed Wearable Device and OFDR-interrogated optical fiber sensing.' }
     },
     'dottorato-dofs.html': {
