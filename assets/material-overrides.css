@@ -361,9 +361,10 @@ a.card:hover { transform: translateY(-5px); border-color: var(--teal); box-shado
 }
 
 /* Content alignment fixes */
+/* Content alignment fixes */
+.projects { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .projects a.card { grid-column: auto; }
-a.card, a.card:nth-child(2), a.card:nth-child(3) { grid-column: auto; }
-.projects .card { min-height: 100%; }
+.projects a.card { min-height: 100%; }
 .card-body { min-height: 340px; }
 .card-media { flex: 0 0 auto; }
 .gages circle { fill: #ffffff; stroke: var(--teal); stroke-width: 1.5; }
