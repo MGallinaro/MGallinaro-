@@ -111,11 +111,13 @@
       '.card:nth-child(3) .tag': { it: 'In corso', en: 'In progress' },
       '.card:nth-child(2) h3': { it: 'Dottorato in DOFS biomedicale', en: 'Biomedical DOFS PhD' },
       '.card:nth-child(3) h3': { it: 'Pipeline DSM monoassiale', en: 'Uniaxial DSM pipeline' },
+            '.card:nth-child(4) .tag': { it: 'In corso', en: 'In progress' },
+      '.card:nth-child(4) h3': { it: 'Riconoscimento Gesti della Mano effettuati durante il gioco del PingPong', en: 'Hand Gesture Recognition during Table Tennis' },
       '.card .card-field:first-of-type .field-label': { it: 'Obiettivo', en: 'Goal' },
       '.card .card-field:nth-of-type(2) .field-label': { it: 'Sfide principali', en: 'Challenges' },
       '.card .placeholder': { it: '[AGGIUNGI TESTO]', en: '[TEXT TO BE ADDED]' },
       '.card:nth-child(1) .open-link': { it: 'Apri progetto · report PDF →', en: 'Open project · PDF report →' },
-      '.card:nth-child(2) .open-link, .card:nth-child(3) .open-link': { it: 'Apri progetto →', en: 'Open project →' }
+            '.card:nth-child(2) .open-link, .card:nth-child(3) .open-link, .card:nth-child(4) .open-link': { it: 'Apri progetto →', en: 'Open project →' }
     },
     'pubblicazioni.html': {
       '.page-head-eyebrow': { it: 'Pubblicazioni & riconoscimenti', en: 'Publications & awards' },
