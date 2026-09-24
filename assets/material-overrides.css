@@ -261,6 +261,7 @@ a.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-2); }
 .project-visual-wearable { background: linear-gradient(135deg, var(--teal-light), var(--surface-alt)); color: var(--teal); }
 .project-visual-phd { background: linear-gradient(135deg, #f3e5c8, var(--surface-alt)); color: var(--brass-dark); }
 .project-visual-pipeline { background: linear-gradient(135deg, #dce4ef, var(--surface-alt)); color: #466587; }
+.project-visual-pingpong { background: linear-gradient(135deg, #e6dcef, var(--surface-alt)); color: #6a4f87; }
 .project-glyph { position: relative; z-index: 1; font: 700 4rem/1 "Playfair Display", serif; opacity: .7; }
 .card-body { display: flex; flex: 1; flex-direction: column; padding: 24px; }
 .card-body h3 { margin: 14px 0 20px; }
