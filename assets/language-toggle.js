@@ -90,7 +90,7 @@
       '.cv-action': { it: '<a class="btn" href="assets/cv-marco-gallinaro-it.pdf" download>↓ Scarica il CV in italiano</a><a class="btn" href="assets/cv-marco-gallinaro-en.pdf" download>↓ Download CV in English</a>', en: '<a class="btn" href="assets/cv-marco-gallinaro-it.pdf" download>↓ Download CV in Italian</a><a class="btn" href="assets/cv-marco-gallinaro-en.pdf" download>↓ Download CV in English</a>' },
       '#progetto-in-evidenza > .eyebrow': { it: '02 — Progetto in evidenza', en: '02 — Featured project' },
       '#progetto-in-evidenza h2': { it: 'Una fibra, centinaia di sensori, disposti come una ragnatela.', en: 'One fiber, hundreds of sensors, arranged like a web.' },
-      '.feature-specs span:nth-child(1)': { it: '<strong>OFDR</strong><small>interrogazione</small>', en: '<strong>OFDR</strong><small>interrogation</small>' },
+            '.feature-specs span:nth-child(1)': { it: '<strong>OFDR</strong><small>interrogazione</small>', en: '<strong>OFDR</strong><small>interrogation</small>' },
       '.feature-specs span:nth-child(2)': { it: '<strong>Termomeccanico</strong><small>monitoraggio</small>', en: '<strong>Thermomechanical</strong><small>monitoring</small>' },
       '.feature-specs span:nth-child(3)': { it: '<strong>Tesi</strong><small>laurea magistrale</small>', en: '<strong>Thesis</strong><small>MSc</small>' },
       '.feature-specs span:nth-child(4)': { it: '<strong>S&amp;A Reports</strong><small>rivista · in revisione</small>', en: '<strong>S&amp;A Reports</strong><small>journal · under review</small>' },
