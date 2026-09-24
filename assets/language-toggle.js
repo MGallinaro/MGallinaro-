@@ -89,7 +89,7 @@
       '.skills-col:nth-child(2) .skills-col-title': { it: 'Competenze trasversali', en: 'Soft skills' },
       '.cv-action': { it: '<a class="btn" href="assets/cv-marco-gallinaro-it.pdf" download>↓ Scarica il CV in italiano</a><a class="btn" href="assets/cv-marco-gallinaro-en.pdf" download>↓ Download CV in English</a>', en: '<a class="btn" href="assets/cv-marco-gallinaro-it.pdf" download>↓ Download CV in Italian</a><a class="btn" href="assets/cv-marco-gallinaro-en.pdf" download>↓ Download CV in English</a>' },
       '#progetto-in-evidenza > .eyebrow': { it: '02 — Progetto in evidenza', en: '02 — Featured project' },
-      '#progetto-in-evidenza h2': { it: 'Una fibra, centinaia di sensori, disposti come una ragnatela.', en: 'One fiber, hundreds of sensors, arranged like a web.' },
+            '#progetto-in-evidenza h2': { it: 'Una fibra ottica, centinaia di punti di misura di forza e temperatura.', en: 'One optical fiber, hundreds of force and temperature measuring points.' },
       '.feature-specs span:nth-child(1)': { it: '<strong>OFDR</strong><small>interrogazione</small>', en: '<strong>OFDR</strong><small>interrogation</small>' },
       '.feature-specs span:nth-child(2)': { it: '<strong>Termomeccanico</strong><small>monitoraggio</small>', en: '<strong>Thermomechanical</strong><small>monitoring</small>' },
       '.feature-specs span:nth-child(3)': { it: '<strong>Tesi</strong><small>laurea magistrale</small>', en: '<strong>Thesis</strong><small>MSc</small>' },
