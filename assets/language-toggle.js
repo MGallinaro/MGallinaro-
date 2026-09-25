@@ -116,6 +116,8 @@
       '.card .card-field:first-of-type .field-label': { it: 'Obiettivo', en: 'Goal' },
       '.card .card-field:nth-of-type(2) .field-label': { it: 'Sfide principali', en: 'Challenges' },
       '.card .placeholder': { it: '[AGGIUNGI TESTO]', en: '[TEXT TO BE ADDED]' },
+            '.card:nth-child(1) .card-field:first-of-type p': { it: 'Sviluppare un dispositivo indossabile e conformabile che misuri forza e temperatura in modo distribuito sulla superficie mammaria, usando una singola fibra ottica interrogata via OFDR.', en: 'Develop a wearable, conformable device that performs distributed force and temperature measurements over the breast surface using a single OFDR-interrogated optical fiber.' },
+            '.card:nth-child(1) .card-field:nth-of-type(2) p': { it: 'Una matrice siliconica abbastanza morbida da adattarsi al corpo, ma capace di trasferire la deformazione alla fibra; un layout che copra la superficie evitando curvature critiche per la fibra; la caratterizzazione in forza con una pressione distribuita su una superficie soffice.', en: 'A silicone matrix soft enough to conform to the body yet able to transfer strain to the fiber; a fiber layout that covers the surface while avoiding critical bends; force characterisation under distributed pressure on a soft surface.' },
             '.card:nth-child(1) .open-link': { it: 'Apri progetto · preprint PDF →', en: 'Open project · preprint PDF →' },
             '.card:nth-child(2) .open-link, .card:nth-child(3) .open-link, .card:nth-child(4) .open-link': { it: 'Apri progetto →', en: 'Open project →' }
     },
