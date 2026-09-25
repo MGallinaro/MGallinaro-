@@ -146,8 +146,7 @@
       '#distributed-wearable-device .skills .item:nth-child(3)': { it: '<b>Grandezze misurate</b>Forza, temperatura', en: '<b>Measured quantities</b>Force, temperature' },
       '#distributed-wearable-device .skills .item:nth-child(4)': { it: '<b>Stato</b>In revisione', en: '<b>Status</b>Under review' },
       'main > section:last-of-type > .eyebrow': { it: 'Preprint', en: 'Preprint' },
-      'main > section:last-of-type h2': { it: 'A Bioinspired Distributed Optical Fiber Sensing Device for Wearable Thermomechanical Monitoring of Breast Tissue', en: 'A Bioinspired Distributed Optical Fiber Sensing Device for Wearable Thermomechanical Monitoring of Breast Tissue' },
-      'main > section:last-of-type > h2 + p': { it: 'Preprint della versione sottomessa, attualmente in revisione presso <em>Sensors and Actuators Reports</em>. La versione pubblicata potrebbe differire.', en: 'Preprint of the submitted version, currently under review at <em>Sensors and Actuators Reports</em>. The published version may differ.' },
+            'main > section:last-of-type > .eyebrow + p': { it: 'Preprint della versione sottomessa, attualmente in revisione presso <em>Sensors and Actuators Reports</em>. La versione pubblicata potrebbe differire.', en: 'Preprint of the submitted version, currently under review at <em>Sensors and Actuators Reports</em>. The published version may differ.' },
       '.report-actions a:nth-child(1)': { it: '↓ Scarica il PDF', en: '↓ Download PDF' },
       '.report-actions a:nth-child(2)': { it: 'Apri in una scheda separata ↗', en: 'Open in a separate tab ↗' },
             '.pdf-fallback': { it: 'Il tuo browser non supporta l’anteprima integrata dei PDF. <a href="assets/dwd-preprint.pdf">Scarica il preprint</a> per leggerlo.', en: 'Your browser does not support the embedded PDF preview. <a href="assets/dwd-preprint.pdf">Download the preprint</a> to read it.' }
