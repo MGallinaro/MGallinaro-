@@ -23,8 +23,8 @@
       description: { it: 'Contatti di Marco Gallinaro.', en: 'Contact Marco Gallinaro.' }
     },
     'distributed-wearable-device.html': {
-      title: { it: 'A Bioinspired Distributed Optical Fiber Sensing Device for Wearable Thermomechanical Monitoring of Breast Tissue — Marco Gallinaro', en: 'A Bioinspired Distributed Optical Fiber Sensing Device for Wearable Thermomechanical Monitoring of Breast Tissue — Marco Gallinaro' },
-      description: { it: 'A Bioinspired Distributed Optical Fiber Sensing Device for Wearable Thermomechanical Monitoring of Breast Tissue', en: 'A Bioinspired Distributed Optical Fiber Sensing Device for Wearable Thermomechanical Monitoring of Breast Tissue' }
+           title: { it: 'Distributed Wearable Device — Marco Gallinaro', en: 'Distributed Wearable Device — Marco Gallinaro' },
+      description: { it: 'Patch indossabile in silicone con fibra ottica a spirale interrogata in OFDR per il monitoraggio termomeccanico del tessuto mammario.', en: 'Wearable silicone patch with an OFDR-interrogated spiral optical fiber for thermomechanical monitoring of breast tissue.' }
     },
     'dottorato-dofs.html': {
       title: { it: 'Dottorato in DOFS biomedicale — Marco Gallinaro', en: 'Biomedical DOFS PhD proposal — Marco Gallinaro' },
@@ -116,7 +116,7 @@
       '.card .card-field:first-of-type .field-label': { it: 'Obiettivo', en: 'Goal' },
       '.card .card-field:nth-of-type(2) .field-label': { it: 'Sfide principali', en: 'Challenges' },
       '.card .placeholder': { it: '[AGGIUNGI TESTO]', en: '[TEXT TO BE ADDED]' },
-      '.card:nth-child(1) .open-link': { it: 'Apri progetto · report PDF →', en: 'Open project · PDF report →' },
+            '.card:nth-child(1) .open-link': { it: 'Apri progetto · preprint PDF →', en: 'Open project · preprint PDF →' },
             '.card:nth-child(2) .open-link, .card:nth-child(3) .open-link, .card:nth-child(4) .open-link': { it: 'Apri progetto →', en: 'Open project →' }
     },
     'pubblicazioni.html': {
@@ -145,11 +145,12 @@
       '#distributed-wearable-device .skills .item:nth-child(2)': { it: '<b>Layout fibra</b>Spirale di Archimede', en: '<b>Fiber layout</b>Archimedean spiral' },
       '#distributed-wearable-device .skills .item:nth-child(3)': { it: '<b>Grandezze misurate</b>Forza, temperatura', en: '<b>Measured quantities</b>Force, temperature' },
       '#distributed-wearable-device .skills .item:nth-child(4)': { it: '<b>Stato</b>In revisione', en: '<b>Status</b>Under review' },
-      'main > section:last-of-type > .eyebrow': { it: 'Report completo', en: 'Full report' },
-      'main > section:last-of-type h2': { it: 'Documento del progetto', en: 'Project document' },
+      'main > section:last-of-type > .eyebrow': { it: 'Preprint', en: 'Preprint' },
+      'main > section:last-of-type h2': { it: 'A Bioinspired Distributed Optical Fiber Sensing Device for Wearable Thermomechanical Monitoring of Breast Tissue', en: 'A Bioinspired Distributed Optical Fiber Sensing Device for Wearable Thermomechanical Monitoring of Breast Tissue' },
+      'main > section:last-of-type > h2 + p': { it: 'Preprint della versione sottomessa, attualmente in revisione presso <em>Sensors and Actuators Reports</em>. La versione pubblicata potrebbe differire.', en: 'Preprint of the submitted version, currently under review at <em>Sensors and Actuators Reports</em>. The published version may differ.' },
       '.report-actions a:nth-child(1)': { it: '↓ Scarica il PDF', en: '↓ Download PDF' },
       '.report-actions a:nth-child(2)': { it: 'Apri in una scheda separata ↗', en: 'Open in a separate tab ↗' },
-      '.pdf-fallback': { it: 'Il tuo browser non supporta l’anteprima integrata dei PDF. <a href="assets/dwd-report.pdf">Scarica il report</a> per leggerlo.', en: 'Your browser does not support the embedded PDF preview. <a href="assets/dwd-report.pdf">Download the report</a> to read it.' }
+            '.pdf-fallback': { it: 'Il tuo browser non supporta l’anteprima integrata dei PDF. <a href="assets/dwd-preprint.pdf">Scarica il preprint</a> per leggerlo.', en: 'Your browser does not support the embedded PDF preview. <a href="assets/dwd-preprint.pdf">Download the preprint</a> to read it.' }
     },
     'dottorato-dofs.html': {
       '.page-head-eyebrow': { it: 'Progetto · Proposta', en: 'Project · Proposal' },
@@ -228,8 +229,8 @@
       : 'Traccia illustrativa di backscattering OFDR lungo una fibra sensorizzata');
     var reportFrame = document.querySelector('.pdf-frame');
     if (reportFrame) reportFrame.setAttribute('title', language === 'en'
-      ? 'PDF report — A Bioinspired Distributed Optical Fiber Sensing Device for Wearable Thermomechanical Monitoring of Breast Tissue'
-      : 'Report PDF — A Bioinspired Distributed Optical Fiber Sensing Device for Wearable Thermomechanical Monitoring of Breast Tissue');
+      ? 'Preprint PDF — Distributed Wearable Device'
+      : 'Preprint PDF — Distributed Wearable Device');
     document.querySelectorAll('.gages circle[data-position]').forEach(function (point) {
       point.setAttribute('aria-label', language === 'en'
         ? 'Sensing point at ' + point.getAttribute('data-position')
