@@ -102,8 +102,8 @@
     },
     'progetti.html': {
       '.page-head-eyebrow': { it: 'Progetti', en: 'Projects' },
-      '.page-head h1': { it: 'Tre linee di lavoro, un unico principio: la fibra come sensore continuo.', en: 'Three lines of work, one principle: the fiber as a continuous sensor.' },
-      '.page-head .dek': { it: 'Dal dispositivo indossabile alla pipeline di analisi, ogni progetto usa una singola fibra ottica interrogata via OFDR per generare centinaia di punti di misura distribuiti. Apri un progetto per i dettagli e, dove disponibile, il report completo in PDF.', en: 'From the wearable device to the analysis pipeline, each project uses one optical fiber interrogated via OFDR to generate hundreds of distributed measuring points. Open a project for details and, where available, the full PDF report.' },
+            '.page-head h1': { it: 'Sensori per il corpo umano, dal prototipo al dato.', en: 'Sensors for the human body, from prototype to data.' },
+            '.page-head .dek': { it: 'Dispositivi indossabili, pipeline di analisi e proposte di ricerca nel sensing biomedicale, con un focus sulla fibra ottica distribuita. Apri un progetto per i dettagli e, dove disponibile, il documento completo in PDF.', en: 'Wearable devices, analysis pipelines, and research proposals in biomedical sensing, with a focus on distributed optical fiber sensing. Open a project for details and, where available, the full PDF document.' },
       '.back-link': { it: '← Home', en: '← Home' },
       '.open-link': { it: 'Apri progetto →', en: 'Open project →' },
       '.card:nth-child(1) .tag': { it: 'In revisione', en: 'Under review' },
