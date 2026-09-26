@@ -87,9 +87,17 @@
   
 <section id="sfide-strategie" class="tight">
   <p class="eyebrow">Sfide e strategie</p>
+  <div class="strategy" id="strategia-layout">
+    <h3>Layout della fibra</h3>
+    <p>Con il DOFS è la fibra stessa a definire dove si misura: bisognava coprire una superficie 2D con un sensore 1D. La soluzione è una spirale di Archimede ispirata alla tela di <em>Araneus diadematus</em>. È un percorso continuo senza incroci, ha passo costante (quindi campionamento spaziale uniforme) e curvatura dolce, che evita le pieghe brusche a cui la fibra è sensibile. Permette anche di rimappare in modo semplice ogni punto di misura sulla superficie.</p>
+  </div>
   <div class="strategy" id="strategia-matrice">
-    <h3>Matrice siliconica</h3>
-    <p>Come matrice ho scelto l'Ecoflex 00-30, uno dei siliconi più cedevoli disponibili (durezza Shore 00-30). Il motivo è meccanico. Uno strato rigido si comporta come una piastra: ridistribuisce un carico locale su un'area ampia e attenua le deformazioni prima che raggiungano la fibra. Una matrice molto cedevole, invece, segue la superficie del tessuto e mantiene il segnale localizzato. È una condizione necessaria per rilevare disomogeneità più rigide, come i noduli, simulati nei phantom con inclusioni sferiche in PLA.</p>
+    <h3>Matrice e integrazione della fibra</h3>
+    <p>Serviva un materiale abbastanza morbido da adattarsi al corpo, che trasferisse deformazione e temperatura alla fibra e la proteggesse. Ho scelto l'Ecoflex 00-30, il più cedevole tra i siliconi disponibili in laboratorio, e ho posizionato la fibra a metà dei 3 mm di spessore. La patch è realizzata con una doppia colata in stampi PLA stampati in 3D: il primo strato contiene la scanalatura a spirale che guida la fibra, il secondo la ingloba.</p>
+  </div>
+  <div class="strategy" id="strategia-caratterizzazione">
+    <h3>Caratterizzazione in condizioni realistiche</h3>
+    <p>Per misurare la risposta in forza la patch è stata compressa tra un phantom che simula il tessuto (Ecoflex GEL 2) e uno strato che simula l'indumento (DragonSkin 20), fino a 100 N. Con 458 punti non basta una curva di taratura unica: ho stimato la sensibilità di ogni punto, che risulta più alta all'esterno della spirale e diminuisce verso l'interno. La temperatura è stata caratterizzata in camera climatica tra 22 e 44 °C.</p>
   </div>
 </section>
 
