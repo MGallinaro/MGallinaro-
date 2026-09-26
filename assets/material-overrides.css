@@ -392,3 +392,10 @@ a.card:hover { transform: translateY(-5px); border-color: var(--teal); box-shado
   height: 100%;
   object-fit: contain;
 }
+.spec-table { width: 100%; max-width: 760px; border-collapse: collapse; margin-top: 1rem; }
+.spec-table th, .spec-table td { text-align: left; vertical-align: top; padding: .75rem 1rem .75rem 0; border-bottom: 1px solid rgba(127,127,127,.25); }
+.spec-table th { width: 36%; font-size: .8rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--accent, #e9b35f); }
+@media (max-width: 600px) {
+  .spec-table tr { display: block; padding: .6rem 0; border-bottom: 1px solid rgba(127,127,127,.25); }
+  .spec-table th, .spec-table td { display: block; width: auto; padding: .15rem 0; border: 0; }
+}
