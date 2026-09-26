@@ -406,3 +406,6 @@ a.card:hover { transform: translateY(-5px); border-color: var(--teal); box-shado
 @media (max-width: 760px) {
   .page-head ~ .tight { padding-block: 32px; }
 }
+.project-figure { margin: 8px 0 0; }
+.project-figure img { width: 100%; height: auto; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+.project-figure figcaption { margin-top: 10px; color: var(--ink-faint); font-size: .85rem; }
