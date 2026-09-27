@@ -69,7 +69,6 @@
       '#chi-sono > .eyebrow': { it: '01 — Chi sono', en: '01 — About me' },
       '#chi-sono h2': { it: 'Sensori su misura, dal prototipo al dato.', en: 'Sensors built for the job, from prototype to data.' },
       '.affiliations .chip:nth-child(3)': { it: 'MSc Ingegneria Biomedica', en: 'MSc Biomedical Engineering' },
-      '.bio-photo .media-placeholder': { it: '[AGGIUNGI FOTO]', en: '[PHOTO TO BE ADDED]' },
       '.skills-col:nth-child(1) .skills-list': {
           it: '<li><strong>Programmazione e analisi dati:</strong> MATLAB, Python, Simulink</li><li><strong>Progettazione CAD e PCB:</strong> Fusion 360, Eagle</li><li><strong>Metodi sperimentali:</strong> sistemi di interrogazione in fibra ottica, prove meccaniche (Instron), caratterizzazione termica e meccanica, test su phantom</li><li><strong>Tecnologie di sensing:</strong> FBG, DOFS, IMU, encoder</li>',
           en: '<li><strong>Programming &amp; Data Analysis:</strong> MATLAB, Python, Simulink</li><li><strong>CAD &amp; PCB Design:</strong> Fusion 360, Eagle</li><li><strong>Experimental Methods:</strong> optical fiber interrogation systems, mechanical testing (Instron), thermal/mechanical characterization, phantom-based testing</li><li><strong>Sensing Technologies:</strong> FBG, DOFS, IMU, encoder</li>'
