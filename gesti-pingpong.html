@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Riconoscimento dei colpi del ping-pong da accelerometro e giroscopio di uno smartphone al polso: progetto di gruppo rifatto da solo, dal 40 % al 91,7 % in tempo reale sul telefono.">
+<title>Riconoscimento dei gesti nel ping-pong &mdash; Marco Gallinaro</title>
+<link rel="canonical" href="https://DA-SOSTITUIRE.example/gesti-pingpong.html">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png"><link rel="shortcut icon" href="assets/apple-touch-icon.png">
+<meta property="og:title" content="Riconoscimento dei gesti nel ping-pong &mdash; Marco Gallinaro">
+<meta property="og:description" content="Riconoscimento dei colpi del ping-pong da accelerometro e giroscopio di uno smartphone al polso: progetto di gruppo rifatto da solo, dal 40 % al 91,7 % in tempo reale sul telefono.">
+<meta property="og:image" content="https://DA-SOSTITUIRE.example/assets/favicon.svg">
+<meta property="og:url" content="https://DA-SOSTITUIRE.example/gesti-pingpong.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Riconoscimento dei gesti nel ping-pong &mdash; Marco Gallinaro">
+<meta name="twitter:description" content="Riconoscimento dei colpi del ping-pong da accelerometro e giroscopio di uno smartphone al polso: progetto di gruppo rifatto da solo, dal 40 % al 91,7 % in tempo reale sul telefono.">
+<meta name="twitter:image" content="https://DA-SOSTITUIRE.example/assets/favicon.svg">
+<meta name="twitter:url" content="https://DA-SOSTITUIRE.example/gesti-pingpong.html">
+<script defer data-domain="DA-SOSTITUIRE.example" src="https://plausible.io/js/script.js"></script>
+<script src="assets/theme-toggle.js"></script>
+<script defer src="assets/language-toggle.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="assets/material-overrides.css">
+
+</head>
+<body>
+
+<a class="skip-link" href="#gesti-pingpong">Vai al contenuto</a>
+
+<nav class="top app-bar" aria-label="Navigazione principale">
+  <div class="nav-shell">
+    <a class="brand-logo" href="index.html">Marco Gallinaro</a>
+    <a href="#mobile-nav" data-target="mobile-nav" class="sidenav-trigger" aria-label="Apri il menu" aria-expanded="false"><i class="material-icons">menu</i></a>
+    <div class="links">
+      <a href="progetti.html" class="is-active">Progetti</a>
+      <a href="pubblicazioni.html">Pubblicazioni</a>
+      <a href="contatti.html">Contatti</a>
+    </div>
+    <button class="theme-toggle" type="button" aria-label="Attiva tema scuro" title="Attiva tema scuro" aria-pressed="false">
+      <span class="theme-icon theme-icon-sun material-icons" aria-hidden="true">light_mode</span>
+      <span class="theme-icon theme-icon-moon material-icons" aria-hidden="true">dark_mode</span>
+    </button>
+    <div class="language-toggle" role="group" aria-label="Seleziona lingua">
+      <button type="button" data-language="it" aria-pressed="true">IT</button>
+      <button type="button" data-language="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</nav>
+<ul class="sidenav" id="mobile-nav">
+  <li><a href="index.html"><i class="material-icons">home</i>&larr; Home</a></li>
+  <li><a href="progetti.html"><i class="material-icons">science</i>Progetti</a></li>
+  <li><a href="pubblicazioni.html"><i class="material-icons">menu_book</i>Pubblicazioni</a></li>
+  <li><a href="contatti.html"><i class="material-icons">mail</i>Contatti</a></li>
+</ul>
+
+<main>
+
+<header class="page-head wrap">
+  <a class="back-link" href="progetti.html">&larr; Tutti i progetti</a>
+  <p class="eyebrow page-head-eyebrow">Progetto &middot; Concluso &middot; Rifatto da solo</p>
+  <h1>Riconoscimento dei gesti della mano effettuati durante il gioco del ping-pong</h1>
+    <p class="dek">Progetto di gruppo del corso di Automazione e Sicurezza (UCBM, 2024), poi rifatto da zero da solo nel 2026. L&rsquo;obiettivo &egrave; riconoscere il colpo di un giocatore di ping-pong dai sensori di uno smartphone al polso. La versione originale superava il 98&nbsp;% offline ma scendeva al 40&nbsp;% sul telefono. Nel rifacimento ho cercato le cause di quel crollo e ricostruito la pipeline perch&eacute; addestramento e uso reale fossero identici: oggi il sistema riconosce il 95,5&nbsp;% dei colpi di persone mai viste e il 91,7&nbsp;% in un test dal vivo sul telefono.</p>
+</header> 
+
+<figure class="project-figure">
+  <img src="assets/pingpong-simulink.png" alt="Modello Simulink del riconoscimento dei colpi: blocchi Accelerometer e Gyroscope di Android, funzione di rilevamento dei colpi, blocco Predict con la rete convoluzionale e visualizzazione della classe e del numero di colpi." loading="lazy">
+  <figcaption>Il modello Simulink che gira sul telefono: i sensori vengono letti ogni 20 ms, la funzione di rilevamento trova il colpo, la rete lo classifica e lo schermo mostra la classe e il numero di colpi.</figcaption>
+</figure>
+
+<section id="gesti-pingpong" class="tight">
+  <p class="eyebrow">Scheda tecnica</p>
+  <table class="spec-table">
+    <tbody>
+      <tr><th scope="row">Origine</th><td>Progetto di gruppo (4 persone), UCBM 2024; mio contributo: reti neurali e modello Simulink</td></tr>
+      <tr><th scope="row">Rifacimento</th><td>2026, da solo: pipeline, rete, rilevatore in tempo reale e app</td></tr>
+      <tr><th scope="row">Sensori</th><td>Accelerometro e giroscopio di uno smartphone al polso · 6 canali · circa 50 Hz reali</td></tr>
+      <tr><th scope="row">Dataset</th><td>11 soggetti · 5 registrazioni da 60 s per colpo · 4710 finestre</td></tr>
+      <tr><th scope="row">Classi</th><td>Servizio · top spin di dritto · top spin di rovescio</td></tr>
+      <tr><th scope="row">Finestra</th><td>1 s centrato sul colpo (50 campioni × 6 canali)</td></tr>
+      <tr><th scope="row">Modello</th><td>Rete convoluzionale 1D · 11.683 parametri</td></tr>
+      <tr><th scope="row">Validazione</th><td>Per soggetto: 7 persone in addestramento, 2 in validazione, 2 in test</td></tr>
+      <tr><th scope="row">Accuratezza offline</th><td>95,5 % su persone mai viste (originale: 98,2 % con validazione falsata)</td></tr>
+      <tr><th scope="row">Accuratezza dal vivo</th><td>91,7 % sul telefono, 55 colpi su 60 (originale: 40 %)</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="sfide-strategie" class="tight">
+  <p class="eyebrow">Sfide e strategie</p>
+  <div class="strategy" id="strategia-dati">
+    <h3>Dati sbagliati prima ancora del modello</h3>
+    <p>Prima di toccare la rete ho controllato i dati. Confrontando ogni registrazione con tutte le altre è emerso che la classe «mano ferma» era una copia esatta del rovescio e che un file era duplicato: la rete stava imparando a separare due copie degli stessi dati. Inoltre i file contenevano 400 righe al secondo, ma il sensore forniva circa 50 valori al secondo, ripetuti: le finestre «da 2 s a 400 Hz» avevano circa 100 valori veri su 800. Ho escluso la classe copiata, lasciando decidere il «nessun colpo» al rilevatore, e portato tutta la pipeline a 50 Hz, la frequenza reale del telefono.</p>
+  </div>
+  <div class="strategy" id="strategia-colpi">
+    <h3>Trovare i colpi in segnali molto diversi</h3>
+    <p>L’ampiezza dei colpi cambia molto tra persone e anche tra registrazioni della stessa persona: una soglia fissa trovava tutti i colpi in un caso e nessuno in un altro. I colpi vengono cercati sul modulo dell’accelerazione, che non dipende da come è orientato il telefono, con una soglia che si adatta al segnale: 2 volte la mediana, che misura il livello tra un colpo e l’altro. Un controllo automatico sul ritmo dei colpi segnala colpi persi e falsi picchi, e i falsi picchi vengono tolti.</p>
+  </div>
+  <div class="strategy" id="strategia-validazione">
+    <h3>Una validazione onesta</h3>
+    <p>Nel progetto originale le finestre erano divise a caso tra addestramento e test, quindi le stesse persone comparivano in entrambi: il 98 % non misurava la capacità di riconoscere un giocatore nuovo. Ora i dati sono divisi per soggetto (7 persone per l’addestramento, 2 per la validazione, 2 per il test) e anche la normalizzazione usa solo le statistiche dell’addestramento. Sulle due persone di test la rete riconosce il 95,5 % dei colpi: meno del 98 % originale, ma è un numero che corrisponde all’uso reale.</p>
+  </div>
+  <div class="strategy" id="strategia-rete">
+    <h3>Una rete che non dipende dalla posizione</h3>
+    <p>La rete feed-forward originale riceveva la finestra appiattita in 4800 valori, legando ogni ingresso a un istante preciso: un colpo spostato nel tempo era per lei un ingresso mai visto. Ho usato una rete convoluzionale 1D, i cui filtri riconoscono una forma ovunque si trovi nella finestra, con 11.683 parametri, meno della metà del solo primo strato della rete originale. Gli errori rimasti sono tra servizio e dritto, i due gesti più simili; il rovescio è sempre riconosciuto.</p>
+  </div>
+  <div class="strategy" id="strategia-online">
+    <h3>La stessa elaborazione offline e in tempo reale</h3>
+    <p>Nel progetto originale offline le finestre erano centrate sul colpo e filtrate sull’intera registrazione, mentre sul telefono il segnale veniva tagliato in blocchi fissi di 2 s e filtrato blocco per blocco: dal vivo la rete vedeva un segnale diverso. Ora il filtro è causale e una funzione MATLAB elabora un campione alla volta: lo filtra appena arriva, lo aggiunge a un buffer degli ultimi 50 e, quando il campione centrale è un colpo, passa il buffer alla rete come finestra, centrata esattamente come in addestramento. L’ho confrontata pezzo per pezzo con la versione offline su registrazioni intere: stessi colpi, stesse classi.</p>
+  </div>
+  <div class="strategy" id="strategia-telefono">
+    <h3>Dal PC al telefono</h3>
+    <p>La funzione e la rete sono state inserite in un modello Simulink, verificato prima sul PC riproducendo una registrazione a 50 Hz e poi compilato in un’app Android. L’app legge accelerometro e giroscopio e mostra la classe di ogni colpo circa mezzo secondo dopo il colpo. In un test dal vivo, con 20 colpi per classe, ha riconosciuto 55 colpi su 60 (91,7 %): servizio e dritto 90 %, rovescio 95 %. È una sola sessione fatta da me, quindi non è ancora un’accuratezza generale: mancano prove su altri giocatori.</p>
+  </div>
+</section>
+
+<section id="report" class="tight">
+  <p class="eyebrow">Report</p>
+  <p class="preprint-note">Report tecnico completo, in inglese: ogni problema incontrato, le scelte fatte e le verifiche. Il codice MATLAB è disponibile su GitHub.</p>
+  <div class="report-block">
+    <div class="report-actions">
+      <a class="btn" href="assets/pingpong-report.pdf" download>↓ Scarica il PDF</a>
+      <a class="btn" href="assets/pingpong-report.pdf" target="_blank" rel="noopener">Apri in una scheda separata ↗</a>
+      <a class="btn" href="https://github.com/MGallinaro/Table-Tennis-Stroke-Recognition-from-Wrist-Worn-Smartphone-Sensors" target="_blank" rel="noopener">Codice su GitHub ↗</a>
+    </div>
+    <iframe class="pdf-frame" src="assets/pingpong-report.pdf" title="Report PDF — Riconoscimento dei colpi nel ping-pong" data-title-it="Report PDF — Riconoscimento dei colpi nel ping-pong" data-title-en="Report PDF — Table tennis stroke recognition">
+      <p class="pdf-fallback">Il tuo browser non supporta l’anteprima integrata dei PDF. <a href="assets/pingpong-report.pdf">Scarica il report</a> per leggerlo.</p>
+    </iframe>
+  </div>
+</section>
+
+</main>
+
+<button class="back-to-top" type="button" aria-label="Torna su" title="Torna su">↑</button>
+
+<footer>
+  <span>Marco Gallinaro &mdash; DOFS &amp; biomedical instrumentation</span>
+  <span id="year"></span>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+<script src="assets/interactions.js"></script>
+</body>
+</html>
