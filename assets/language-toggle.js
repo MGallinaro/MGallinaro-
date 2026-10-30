@@ -38,6 +38,10 @@
       title: { it: 'Riconoscimento dei gesti nel ping-pong — Marco Gallinaro', en: 'Table tennis gesture recognition — Marco Gallinaro' },
       description: { it: 'Riconoscimento dei colpi del ping-pong da accelerometro e giroscopio di uno smartphone al polso: progetto di gruppo rifatto da solo, dal 40 % al 91,7 % in tempo reale sul telefono.', en: 'Table tennis stroke recognition from the accelerometer and gyroscope of a wrist-worn smartphone: a group project rebuilt on my own, from 40 % to 91.7 % in real time on the phone.' }
     },
+    'kit-chirurgici.html': {
+      title: { it: 'Kit chirurgici completi — Marco Gallinaro', en: 'Complete surgical kits — Marco Gallinaro' },
+      description: { it: 'Come ridurre gli errori nella composizione dei kit di strumenti chirurgici: sei soluzioni confrontate con cinque criteri pesati e un’analisi critica di quanto il risultato dipenda dai pesi scelti.', en: 'How to reduce errors in assembling surgical instrument kits: six solutions compared with five weighted criteria, and a critical look at how much the result depends on the chosen weights.' }
+    },
     '404.html': {
       title: { it: 'Pagina non trovata — Marco Gallinaro', en: 'Page not found — Marco Gallinaro' },
       description: { it: 'La pagina richiesta non è disponibile.', en: 'The requested page is unavailable.' }
@@ -105,26 +109,32 @@
     },
     'progetti.html': {
       '.page-head-eyebrow': { it: 'Progetti', en: 'Projects' },
+      '#altri-progetti > .eyebrow': { it: 'Altri progetti', en: 'Other projects' },
+      '#altri-progetti .preprint-note': { it: 'Lavori di corso e progetti accademici fuori dal tema principale del sito (il sensing a fibra ottica). Mostrano come imposto un problema clinico e come scelgo tra più soluzioni.', en: 'Coursework and academic projects outside the main theme of the site (optical fiber sensing). They show how I frame a clinical problem and choose between several solutions.' },
+      '#altri-progetti .tag': { it: 'Concluso', en: 'Completed' },
+      '#altri-progetti h3': { it: 'Kit chirurgici completi: ridurre l’errore umano nella centrale di sterilizzazione', en: 'Complete surgical kits: reducing human error in the sterilization unit' },
+      '#altri-progetti .card-field:first-of-type p': { it: 'Ridurre gli errori nella composizione dei kit di strumenti sterilizzati per la sala operatoria di Otorinolaringoiatria: pezzi che mancano o che sono di troppo.', en: 'Reduce errors in assembling the sterilized instrument kits for the Otorhinolaryngology operating room: missing or surplus instruments.' },
+      '#altri-progetti .card-field:nth-of-type(2) p': { it: 'Muoversi in un ambiente clinico reale: osservare l’attività in ambulatorio e in sala operatoria, coordinare le osservazioni con i colleghi del gruppo, fare ai medici e agli infermieri domande mirate e raccogliere le informazioni necessarie a trasformare ciò che si vede in un problema ben definito. Poi generare sei soluzioni alternative e valutarle con criteri espliciti e pesati.', en: 'Working in a real clinical setting: observing activity in the outpatient clinic and the operating room, coordinating observations with my teammates, asking doctors and nurses targeted questions, and gathering the information needed to turn what I saw into a well-defined problem. Then generating six alternative solutions and evaluating them with explicit, weighted criteria.' },
             '.page-head h1': { it: 'Sensori per il corpo umano, dal prototipo al dato.', en: 'Sensors for the human body, from prototype to data.' },
             '.page-head .dek': { it: 'Dispositivi indossabili, pipeline di analisi e proposte di ricerca nel sensing biomedicale, con un focus sulla fibra ottica distribuita. Apri un progetto per i dettagli e, dove disponibile, il documento completo in PDF.', en: 'Wearable devices, analysis pipelines, and research proposals in biomedical sensing, with a focus on distributed optical fiber sensing. Open a project for details and, where available, the full PDF document.' },
       '.back-link': { it: '← Home', en: '← Home' },
       '.open-link': { it: 'Apri progetto →', en: 'Open project →' },
-      '.card:nth-child(1) .tag': { it: 'In revisione', en: 'Under review' },
-      '.card:nth-child(2) .tag': { it: 'Proposta', en: 'Proposal' },
-      '.card:nth-child(3) .tag': { it: 'In corso', en: 'In progress' },
-      '.card:nth-child(2) h3': { it: 'Dottorato in DOFS biomedicale', en: 'Biomedical DOFS PhD' },
-      '.card:nth-child(3) h3': { it: 'Pipeline DSM monoassiale', en: 'Uniaxial DSM pipeline' },
-      '.card:nth-child(4) .tag': { it: 'Concluso', en: 'Completed' },
-      '.card:nth-child(4) h3': { it: 'Riconoscimento dei gesti della mano effettuati durante il gioco del ping-pong', en: 'Recognition of hand gestures performed while playing table tennis' },
-      '.card:nth-child(4) .card-field:first-of-type p': { it: 'Riconoscere in tempo reale il colpo di un giocatore di ping-pong (servizio, top spin di dritto, top spin di rovescio) dai soli accelerometro e giroscopio di uno smartphone al polso.', en: 'Recognise in real time a table tennis player’s stroke (serve, forehand topspin, backhand topspin) from the accelerometer and gyroscope of a wrist-worn smartphone alone.' },
-      '.card:nth-child(4) .card-field:nth-of-type(2) p': { it: 'La versione di gruppo superava il 98 % offline ma scendeva al 40 % sul telefono. L’ho rifatta da solo: dati corretti, stessa elaborazione in addestramento e in tempo reale, validazione su persone mai viste. Risultato: 95,5 % offline e 91,7 % dal vivo sul telefono.', en: 'The group version exceeded 98 % offline but dropped to 40 % on the phone. I rebuilt it on my own: corrected data, the same processing in training and in real time, validation on people never seen. Result: 95.5 % offline and 91.7 % live on the phone.' },
+      '#progetti .card:nth-child(1) .tag': { it: 'In revisione', en: 'Under review' },
+      '#progetti .card:nth-child(2) .tag': { it: 'Proposta', en: 'Proposal' },
+      '#progetti .card:nth-child(3) .tag': { it: 'In corso', en: 'In progress' },
+      '#progetti .card:nth-child(2) h3': { it: 'Dottorato in DOFS biomedicale', en: 'Biomedical DOFS PhD' },
+      '#progetti .card:nth-child(3) h3': { it: 'Pipeline DSM monoassiale', en: 'Uniaxial DSM pipeline' },
+      '#progetti .card:nth-child(4) .tag': { it: 'Concluso', en: 'Completed' },
+      '#progetti .card:nth-child(4) h3': { it: 'Riconoscimento dei gesti della mano effettuati durante il gioco del ping-pong', en: 'Recognition of hand gestures performed while playing table tennis' },
+      '#progetti .card:nth-child(4) .card-field:first-of-type p': { it: 'Riconoscere in tempo reale il colpo di un giocatore di ping-pong (servizio, top spin di dritto, top spin di rovescio) dai soli accelerometro e giroscopio di uno smartphone al polso.', en: 'Recognise in real time a table tennis player’s stroke (serve, forehand topspin, backhand topspin) from the accelerometer and gyroscope of a wrist-worn smartphone alone.' },
+      '#progetti .card:nth-child(4) .card-field:nth-of-type(2) p': { it: 'La versione di gruppo superava il 98 % offline ma scendeva al 40 % sul telefono. L’ho rifatta da solo: dati corretti, stessa elaborazione in addestramento e in tempo reale, validazione su persone mai viste. Risultato: 95,5 % offline e 91,7 % dal vivo sul telefono.', en: 'The group version exceeded 98 % offline but dropped to 40 % on the phone. I rebuilt it on my own: corrected data, the same processing in training and in real time, validation on people never seen. Result: 95.5 % offline and 91.7 % live on the phone.' },
       '.card .card-field:first-of-type .field-label': { it: 'Obiettivo', en: 'Goal' },
       '.card .card-field:nth-of-type(2) .field-label': { it: 'Sfide principali', en: 'Challenges' },
       '.card .placeholder': { it: '[AGGIUNGI TESTO]', en: '[TEXT TO BE ADDED]' },
-            '.card:nth-child(1) .card-field:first-of-type p': { it: 'Sviluppare un dispositivo indossabile e conformabile che misuri forza e temperatura in modo distribuito sulla superficie mammaria, usando una singola fibra ottica interrogata via OFDR.', en: 'Develop a wearable, conformable device that performs distributed force and temperature measurements over the breast surface using a single OFDR-interrogated optical fiber.' },
-            '.card:nth-child(1) .card-field:nth-of-type(2) p': { it: 'Una matrice siliconica abbastanza morbida da adattarsi al corpo, ma capace di trasferire la deformazione alla fibra; un layout che copra la superficie evitando curvature critiche per la fibra; la caratterizzazione in forza con una pressione distribuita su una superficie soffice.', en: 'A silicone matrix soft enough to conform to the body yet able to transfer strain to the fiber; a fiber layout that covers the surface while avoiding critical bends; force characterisation under distributed pressure on a soft surface.' },
-            '.card:nth-child(1) .open-link': { it: 'Apri progetto · preprint PDF →', en: 'Open project · preprint PDF →' },
-            '.card:nth-child(2) .open-link, .card:nth-child(3) .open-link, .card:nth-child(4) .open-link': { it: 'Apri progetto →', en: 'Open project →' }
+            '#progetti .card:nth-child(1) .card-field:first-of-type p': { it: 'Sviluppare un dispositivo indossabile e conformabile che misuri forza e temperatura in modo distribuito sulla superficie mammaria, usando una singola fibra ottica interrogata via OFDR.', en: 'Develop a wearable, conformable device that performs distributed force and temperature measurements over the breast surface using a single OFDR-interrogated optical fiber.' },
+            '#progetti .card:nth-child(1) .card-field:nth-of-type(2) p': { it: 'Una matrice siliconica abbastanza morbida da adattarsi al corpo, ma capace di trasferire la deformazione alla fibra; un layout che copra la superficie evitando curvature critiche per la fibra; la caratterizzazione in forza con una pressione distribuita su una superficie soffice.', en: 'A silicone matrix soft enough to conform to the body yet able to transfer strain to the fiber; a fiber layout that covers the surface while avoiding critical bends; force characterisation under distributed pressure on a soft surface.' },
+            '#progetti .card:nth-child(1) .open-link': { it: 'Apri progetto · preprint PDF →', en: 'Open project · preprint PDF →' },
+            '#progetti .card:nth-child(2) .open-link, #progetti .card:nth-child(3) .open-link, #progetti .card:nth-child(4) .open-link': { it: 'Apri progetto →', en: 'Open project →' }
     },
     'pubblicazioni.html': {
       '.page-head-eyebrow': { it: 'Pubblicazioni & riconoscimenti', en: 'Publications & awards' },
