@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Progettazione elettronica della scheda di un cucchiaio che compensa il tremore nel Parkinson: sensore, alimentazione, ricarica e disegno della PCB, con un’analisi critica degli errori trovati.">
+<title>Steady Spoon &mdash; Marco Gallinaro</title>
+<link rel="canonical" href="https://DA-SOSTITUIRE.example/steady-spoon.html">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png"><link rel="shortcut icon" href="assets/apple-touch-icon.png">
+<meta property="og:title" content="Steady Spoon &mdash; Marco Gallinaro">
+<meta property="og:description" content="Progettazione elettronica della scheda di un cucchiaio che compensa il tremore nel Parkinson: sensore, alimentazione, ricarica e disegno della PCB, con un’analisi critica degli errori trovati.">
+<meta property="og:image" content="https://DA-SOSTITUIRE.example/assets/favicon.svg">
+<meta property="og:url" content="https://DA-SOSTITUIRE.example/steady-spoon.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Steady Spoon &mdash; Marco Gallinaro">
+<meta name="twitter:description" content="Progettazione elettronica della scheda di un cucchiaio che compensa il tremore nel Parkinson: sensore, alimentazione, ricarica e disegno della PCB, con un’analisi critica degli errori trovati.">
+<meta name="twitter:image" content="https://DA-SOSTITUIRE.example/assets/favicon.svg">
+<meta name="twitter:url" content="https://DA-SOSTITUIRE.example/steady-spoon.html">
+<script defer data-domain="DA-SOSTITUIRE.example" src="https://plausible.io/js/script.js"></script>
+<script src="assets/theme-toggle.js"></script>
+<script defer src="assets/language-toggle.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="assets/material-overrides.css">
+</head>
+<body>
+
+<a class="skip-link" href="#steady-spoon">Vai al contenuto</a>
+
+<nav class="top app-bar" aria-label="Navigazione principale">
+  <div class="nav-shell">
+    <a class="brand-logo" href="index.html">Marco Gallinaro</a>
+    <a href="#mobile-nav" data-target="mobile-nav" class="sidenav-trigger" aria-label="Apri il menu" aria-expanded="false"><i class="material-icons">menu</i></a>
+    <div class="links">
+      <a href="progetti.html" class="is-active">Progetti</a>
+      <a href="pubblicazioni.html">Pubblicazioni</a>
+      <a href="contatti.html">Contatti</a>
+    </div>
+    <button class="theme-toggle" type="button" aria-label="Attiva tema scuro" title="Attiva tema scuro" aria-pressed="false">
+      <span class="theme-icon theme-icon-sun material-icons" aria-hidden="true">light_mode</span>
+      <span class="theme-icon theme-icon-moon material-icons" aria-hidden="true">dark_mode</span>
+    </button>
+    <div class="language-toggle" role="group" aria-label="Seleziona lingua">
+      <button type="button" data-language="it" aria-pressed="true">IT</button>
+      <button type="button" data-language="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</nav>
+<ul class="sidenav" id="mobile-nav">
+  <li><a href="index.html"><i class="material-icons">home</i>&larr; Home</a></li>
+  <li><a href="progetti.html"><i class="material-icons">science</i>Progetti</a></li>
+  <li><a href="pubblicazioni.html"><i class="material-icons">menu_book</i>Pubblicazioni</a></li>
+  <li><a href="contatti.html"><i class="material-icons">mail</i>Contatti</a></li>
+</ul>
+
+<main>
+
+<header class="page-head wrap">
+  <a class="back-link" href="progetti.html">&larr; Tutti i progetti</a>
+  <p class="eyebrow page-head-eyebrow">Progetto · Concluso · Lavoro di gruppo, solo elettronica</p>
+  <h1>Steady Spoon: l’elettronica di un cucchiaio che compensa il tremore</h1>
+  <p class="dek">Progetto di gruppo del corso di Biodesign (UCBM, a.a. 2024–2025): un cucchiaio per persone con malattia di Parkinson che legge il tremore della mano e inclina la punta in senso opposto con due servomotori. Io mi sono occupato solo dell’elettronica: la scheda (PCB) da 84 × 39 mm che legge il sensore di movimento, comanda i motori e gestisce batteria e ricarica. Meccanica, motori, analisi dei dati e firmware sono lavoro del resto del gruppo.</p>
+</header>
+
+<figure class="project-figure" id="fig-pcb">
+  <img src="assets/steady-spoon-pcb-eagle.png" alt="Vista dall’alto della scheda finale (revisione D) nell’editor Eagle: rame superiore in rosso, rame inferiore in blu." loading="lazy">
+  <figcaption>La scheda finale (revisione D) in Eagle: 84 × 39 mm, due strati di rame (rosso sopra, blu sotto).</figcaption>
+</figure>
+
+<section id="in-breve" class="tight">
+  <p class="eyebrow">In breve</p>
+  <p><strong>Il problema.</strong> Il tremore del Parkinson fa cadere il cibo prima che arrivi alla bocca. Il cucchiaio misura il movimento della mano e muove la punta nel verso opposto per tenerla ferma.</p><p><strong>Il mio ruolo.</strong> L’elettronica: scelta di sensore, microcontrollore, batteria, regolatori di tensione e caricabatterie, poi schema e disegno della scheda in Eagle.</p><p><strong>Il risultato.</strong> Una scheda da 84 × 39 mm senza errori nel controllo delle regole di disegno, con un costo di 28,42&nbsp;€ (componenti e produzione stimata). Il report però non descrive una scheda realizzata né misure: è un progetto su carta. Rileggendo schema e distinta ho trovato diversi errori: tre li ho già corretti, gli altri sono descritti nella sezione «Dove è fragile».</p>
+</section>
+
+<section id="steady-spoon" class="tight">
+  <p class="eyebrow">Scheda tecnica</p>
+  <table class="spec-table">
+    <tbody>
+      <tr><th scope="row">Origine</th><td>Progetto di gruppo (8 persone), corso di Biodesign, UCBM, a.a. 2024–2025; mio contributo: elettronica</td></tr><tr><th scope="row">Obiettivo</th><td>Compensare il tremore della mano durante il pasto, con un dispositivo leggero, lavabile e sotto i 100&nbsp;$</td></tr><tr><th scope="row">Sensore</th><td>MPU-6050 (giroscopio e accelerometro a 3 assi) collegato via I²C; letture a 50 Hz, perché il tremore misurato arriva a circa 23 Hz</td></tr><tr><th scope="row">Microcontrollore</th><td>ATmega328P a 16 MHz, con due uscite PWM per i servomotori; interfaccia USB-seriale FT232RL per caricare il programma</td></tr><tr><th scope="row">Alimentazione</th><td>Due celle Li-ion 18650 in serie (7,4 V, 2200 mAh); regolatori a 5 V (LM2940) e 6 V (BD60HC5); ricarica da alimentatore a 9 V con BQ24172</td></tr><tr><th scope="row">Autonomia calcolata</th><td>Circa 1 h 37 min al consumo massimo (1354 mA)</td></tr><tr><th scope="row">Scheda</th><td>84 × 39 mm · 2 strati · 86 componenti · 193 via · 4 fori di fissaggio · nessun errore nel controllo del disegno (DRC), 50 avvisi dello schema accettati</td></tr><tr><th scope="row">Costo</th><td>Scheda 28,42&nbsp;€ (componenti 24,70&nbsp;€ + produzione stimata 3,72&nbsp;€); cucchiaio completo 72,41&nbsp;€ (stime del gruppo)</td></tr><tr><th scope="row">Strumenti</th><td>Autodesk Eagle (schema e scheda); distinta componenti da Farnell</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="contributo" class="tight">
+  <p class="eyebrow">Cosa ho fatto io</p>
+  <div class="strategy" id="contributo-sensore">
+    <h3>Scegliere il sensore e il microcontrollore</h3>
+    <p>Dai dati sul tremore dei pazienti il movimento più veloce era a circa 23 Hz, quindi servono almeno 46 misure al secondo. Ho scelto il sensore MPU-6050, che misura rotazioni e accelerazioni, ed è piccolo (4 × 4 mm) e consuma 3,9 mA. Il microcontrollore è l’ATmega328P, quello dell’Arduino: per leggere il sensore a 50 Hz bastano 7000 bit al secondo, e ho impostato 9600.</p>
+  </div>
+  <div class="strategy" id="contributo-alimentazione">
+    <h3>Dimensionare l’alimentazione</h3>
+    <p>Ho sommato i consumi di tutti i componenti: 1 A per il servo alla punta, 330 mA per l’altro, 15 mA per l’interfaccia USB e 9 mA per il microcontrollore, in totale 1354 mA. Con il 20 % di margine la batteria deve dare almeno 1,7 A. Ho scelto due celle 18650 in serie invece di una batteria da 7,4 V, che è più grande e non entrava nel disegno meccanico. Servono due regolatori: 5 V per microcontrollore, USB e secondo servo; 6 V per il servo alla punta. Il sensore prende i suoi 3,3 V dall’interfaccia USB, così non serve un terzo regolatore.</p>
+  </div>
+  <div class="strategy" id="contributo-carica">
+    <h3>Progettare la ricarica</h3>
+    <p>Il caricabatterie BQ24172 carica le celle in tre fasi e sceglie da solo se alimentare il sistema dalla batteria o dall’alimentatore. Le sue impostazioni si fissano con le resistenze: 300 kΩ e 100 kΩ per fermare la carica a 8,4 V, 140 kΩ e 10 kΩ per una corrente di circa 1,1 A (mezzo C, come indica la scheda tecnica delle celle), un condensatore da 33 nF per il timer di sicurezza, che scade dopo circa tre ore. Un LED giallo mostra lo stato della carica.</p>
+  </div>
+  <div class="strategy" id="contributo-scheda">
+    <h3>Disegnare la scheda</h3>
+    <p>Sono partito dai componenti dell’Arduino Nano che servivano e ne ho aggiunti altri. I condensatori stanno vicino ai chip che alimentano, per ridurre il rumore. Sotto il jack di ricarica e i regolatori non passano piste, perché scaldano. Il sensore è lontano dal centro, sull’asse lungo, e allineato con l’indice, che il gruppo ha preso come riferimento per il movimento. Ci sono un interruttore, un LED giallo per la ricarica, un LED rosso che si accende sotto i 7 V e quattro fori per fissare la scheda al guscio.</p>
+  </div>
+</section>
+
+<section id="funzionamento" class="tight">
+  <p class="eyebrow">Come è fatta la scheda</p>
+  <figure class="project-figure" id="fig-blocchi">
+    <svg class="blocks" viewBox="0 0 690 380" role="img" aria-labelledby="blocchi-t" xmlns="http://www.w3.org/2000/svg">
+<title id="blocchi-t">Schema a blocchi: alimentatore a 9 V e batteria collegati al BQ24172, che alimenta il regolatore LM2940 a 5 V e il BD60HC5 a 6 V; il 5 V alimenta FT232RL, ATmega328P e servo 2, il 6 V il servo 1; l’ATmega328P comunica con il sensore MPU-6050 e comanda i servo.</title>
+<style>
+.blocks{width:100%;height:auto;font:500 15px Inter,system-ui,sans-serif}
+.blocks text{fill:var(--ink,#182321)}.blocks .s{font-size:12px;fill:var(--ink-muted,#52605b)}
+.blocks .b{fill:var(--surface-alt,#f1f5f3);stroke:var(--line,#d6dfda);stroke-width:1.5}
+.blocks .h{fill:var(--teal-light,#d8ebe7);stroke:var(--teal,#14766d);stroke-width:1.5}
+.blocks .p{fill:none;stroke:var(--teal,#14766d);stroke-width:2}
+.blocks .g{fill:none;stroke:var(--brass,#b8892f);stroke-width:1.8;stroke-dasharray:5 4}
+.blocks .l{font-size:12px;fill:var(--brass-dark,#8a6420)}
+</style>
+<defs>
+<marker id="ap" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--teal,#14766d)"/></marker>
+<marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--brass,#b8892f)"/></marker>
+</defs>
+<rect class="b" x="10" y="20" width="120" height="44" rx="7"/><text x="70.0" y="47.0" text-anchor="middle">Jack 9 V</text>
+<rect class="b" x="10" y="170" width="120" height="44" rx="7"/><text x="70.0" y="197.0" text-anchor="middle">2S Li-ion</text>
+<rect class="h" x="170" y="95" width="130" height="56" rx="7"/><text x="235.0" y="128.0" text-anchor="middle">BQ24172</text>
+<rect class="b" x="340" y="20" width="130" height="44" rx="7"/><text x="405.0" y="47.0" text-anchor="middle">LM2940 · 5 V</text>
+<rect class="b" x="340" y="300" width="130" height="44" rx="7"/><text x="405.0" y="327.0" text-anchor="middle">BD60HC5 · 6 V</text>
+<rect class="b" x="510" y="20" width="120" height="44" rx="7"/><text x="570.0" y="47.0" text-anchor="middle">FT232RL</text>
+<rect class="h" x="510" y="90" width="120" height="44" rx="7"/><text x="570.0" y="117.0" text-anchor="middle">ATmega328P</text>
+<rect class="b" x="510" y="160" width="120" height="44" rx="7"/><text x="570.0" y="187.0" text-anchor="middle">MPU-6050</text>
+<rect class="b" x="510" y="230" width="120" height="44" rx="7"/><text x="570.0" y="257.0" text-anchor="middle">Servo 2</text>
+<rect class="b" x="510" y="300" width="120" height="44" rx="7"/><text x="570.0" y="327.0" text-anchor="middle">Servo 1</text>
+<path class="p" d="M130,42 H150 V110 H168" marker-end="url(#ap)"/>
+<path class="p" d="M130,192 H150 V136 H168" marker-end="url(#ap)" marker-start="url(#ap)"/>
+<path class="p" d="M300,123 H320 V42 H338" marker-end="url(#ap)"/>
+<path class="p" d="M320,123 V322 H338" marker-end="url(#ap)"/>
+<path class="p" d="M470,42 H490 V252 H508" marker-end="url(#ap)"/>
+<path class="p" d="M490,42 H508" marker-end="url(#ap)"/>
+<path class="p" d="M490,112 H508" marker-end="url(#ap)"/>
+<path class="p" d="M470,322 H508" marker-end="url(#ap)"/>
+<path class="g" d="M570,64 V88" marker-end="url(#ag)" marker-start="url(#ag)"/><text class="l" x="578" y="80">UART</text>
+<path class="g" d="M570,134 V158" marker-end="url(#ag)" marker-start="url(#ag)"/><text class="l" x="578" y="150">I²C</text>
+<path class="g" d="M630,112 H655 V252 H632" marker-end="url(#ag)"/>
+<path class="g" d="M655,322 H632" marker-end="url(#ag)"/><path class="g" d="M655,252 V322"/>
+<text class="l" x="660" y="190" transform="rotate(90 660 190)" text-anchor="middle">PWM</text>
+</svg>
+    <figcaption>Schema a blocchi della scheda. Le linee continue sono alimentazione, quelle tratteggiate sono segnali: lettura del sensore (I²C), comunicazione con il computer (UART) e comandi ai servomotori (PWM). Il sensore prende i 3,3 V dall’FT232RL.</figcaption>
+  </figure>
+  <figure class="project-figure" id="fig-schema">
+    <a href="assets/steady-spoon-schema-eagle.jpg" target="_blank" rel="noopener"><img src="assets/steady-spoon-schema-eagle.jpg" alt="Schema elettrico completo della scheda in Eagle: caricabatterie BQ24172, sensore MPU-6050, ATmega328P, interfaccia USB FT232RL, regolatori a 6 V e 5 V, connettori." loading="lazy"></a>
+    <figcaption>Lo schema elettrico in Eagle, con i valori corretti del caricabatterie (RAC 10 mΩ, R8 33,2 kΩ, R15 140 kΩ, C22 33 nF). Cliccando l’immagine si apre a dimensione piena.</figcaption>
+  </figure>
+</section>
+
+<section id="fragile" class="tight">
+  <p class="eyebrow">Dove è fragile</p>
+  <p class="preprint-note">Ho riletto schema, scheda e distinta confrontandoli con i calcoli del report. I primi tre punti li ho corretti nello schema in Eagle; gli altri restano aperti e vanno risolti prima di far produrre la scheda. Il PDF del report qui sotto è la versione consegnata, prima di queste correzioni.</p>
+  <div class="strategy" id="fragile-resistenza">
+    <h3>Corretto · Una resistenza sbagliata nel caricabatterie</h3>
+    <p>Nello schema la resistenza RAC, che fissa il limite di corrente in ingresso del BQ24172, valeva 10 Ω, mentre nei miei calcoli doveva essere 10 mΩ. Con 10 Ω il limite sarebbe stato di pochi milliampere e la carica non sarebbe partita. L’ho corretta nello schema. Nella distinta il codice ordinato per la resistenza da 10 mΩ (RSR) resta quello di un resistore da 10 Ω: non l’ho ancora aggiornato.</p>
+  </div>
+  <div class="strategy" id="fragile-valori">
+    <h3>Corretto · Valori non standard</h3>
+    <p>I valori 65 kΩ e 33,5 kΩ del report non esistono in commercio e nella distinta erano diventati altri. Ora nello schema ci sono valori standard: R8 = 33,2 kΩ (limite d’ingresso di circa 3,8 A) e R15 = 140 kΩ (vedi il punto successivo).</p>
+  </div>
+  <div class="strategy" id="fragile-carica">
+    <h3>Corretto · Ricarica troppo veloce e timer troppo corto</h3>
+    <p>Il report prevedeva una ricarica a 2,2 A (1 C) in circa un’ora, con il timer di sicurezza impostato proprio a un’ora: a fine carica il timer avrebbe fermato il caricabatterie prima che le celle fossero piene. La scheda tecnica delle celle indica 0,5 C come corrente standard. Ora la corrente è di circa 1,1 A (R15 = 140 kΩ) e il timer, con C22 = 33 nF, scade dopo circa tre ore. Sono valori calcolati, non misurati.</p>
+  </div>
+  <div class="strategy" id="fragile-tensione">
+    <h3>Aperto · La batteria piena supera il limite di un regolatore</h3>
+    <p>Ho dimensionato tutto sui 7,4 V nominali, ma a fine carica le due celle arrivano a 8,4 V, e con l’alimentatore collegato il sistema vede circa 9 V. Il regolatore a 6 V (BD60HC5) accetta in ingresso al massimo 8 V, come scritto nel mio stesso allegato. Per risolvere serve un regolatore con ingresso di almeno 10 V, e cambia anche l’impronta sulla scheda: per questo non l’ho corretto.</p>
+  </div>
+  <div class="strategy" id="fragile-led">
+    <h3>Aperto · La soglia del LED rosso</h3>
+    <p>Il LED rosso avvisa che la batteria si sta scaricando, ma la soglia (7 V) sta nel firmware, che non è mio e non ho visto. Lo stesso regolatore a 6 V ha bisogno di almeno 6,9 V per dare 6 V, quindi con 7 V resta pochissimo margine: la soglia andrebbe alzata, a mio parere intorno a 7,3 V. È una stima, da verificare con una prova.</p>
+  </div>
+  <div class="strategy" id="fragile-distinta">
+    <h3>Aperto · Distinta e documenti non allineati</h3>
+    <p>Lo schema usa il regolatore LM2940 in contenitore SOT-223, ma nella distinta il codice ordinato è quello in contenitore TO-220, che non entrerebbe nell’impronta disegnata. Il codice della resistenza da 10 mΩ rimanda a un resistore da 10 Ω, e anche due condensatori hanno una taglia diversa da quella disegnata. Il condensatore CPVCC (10 µF, 4 V) sta su una linea che arriva a 8,4–9 V e C13 (0,47 µF, 10 V) sulla linea d’ingresso: andrebbero scelti con tensione nominale più alta. L’allegato sulla scheda parla anche di un regolatore LM1117 che nello schema non c’è. Non ho corretto la distinta.</p>
+  </div>
+  <div class="strategy" id="fragile-prove">
+    <h3>Aperto · Nessuna misura</h3>
+    <p>Il report valuta il cucchiaio con un’autovalutazione del gruppo (77 su 90) e non riporta misure sulla scheda. Anche l’interruttore di accensione, secondo il report, va ancora completato. Quindi i numeri di autonomia e di ricarica sono calcoli, non risultati.</p>
+  </div>
+</section>
+
+<section id="come-rifarei" class="tight">
+  <p class="eyebrow">Come lo rifarei</p>
+  <div class="strategy" id="fix-controlli">
+    <h3>Controllare valori e distinta in modo sistematico</h3>
+    <p>Confrontare uno per uno valore, contenitore, tensione nominale e codice ordinato di ogni componente prima di ordinare, e usare solo valori standard. Gli errori sulle resistenze del caricabatterie li ho trovati solo rileggendo tutto a posteriori.</p>
+  </div>
+  <div class="strategy" id="fix-tensioni">
+    <h3>Fare i conti su tutto l’intervallo della batteria</h3>
+    <p>Verificare ogni componente da 6 V a 9 V, non solo a 7,4 V: usare per i 6 V un regolatore a commutazione che accetti almeno 10 V in ingresso e spostare di conseguenza la soglia del LED rosso.</p>
+  </div>
+  <div class="strategy" id="fix-prova">
+    <h3>Costruire e misurare</h3>
+    <p>Far produrre una prima scheda e misurare corrente assorbita, durata della carica e rumore del sensore con i servomotori accesi. Solo allora autonomia e tempo di ricarica diventano risultati.</p>
+  </div>
+</section>
+
+<section id="report" class="tight">
+  <p class="eyebrow">Report</p>
+  <p class="preprint-note">Estratto in inglese del report finale di gruppo (versione 4.0, gennaio 2025): la sezione sull’elettronica e sei allegati su scheda, caricabatterie, regolatori, batterie, microcontrollore e sensore. Il resto del report è lavoro di gruppo e non è incluso. È la versione consegnata, prima delle correzioni descritte sopra (dice ancora ricarica in un’ora e i valori originali).</p>
+  <div class="report-block">
+    <div class="report-actions">
+      <a class="btn" href="assets/steady-spoon-elettronica.pdf" download>↓ Scarica il PDF</a><a class="btn" href="assets/steady-spoon-elettronica.pdf" target="_blank" rel="noopener">Apri in una scheda separata ↗</a>
+    </div>
+    <iframe class="pdf-frame" src="assets/steady-spoon-elettronica.pdf" title="Estratto del report — Steady Spoon, progettazione elettronica" data-title-it="Estratto del report — Steady Spoon, progettazione elettronica" data-title-en="Report excerpt — Steady Spoon electronic design">
+      <p class="pdf-fallback">Il tuo browser non supporta l’anteprima integrata dei PDF. <a href="assets/steady-spoon-elettronica.pdf">Scarica il report</a> per leggerlo.</p>
+    </iframe>
+  </div>
+</section>
+
+</main>
+
+<button class="back-to-top" type="button" aria-label="Torna su" title="Torna su">↑</button>
+
+<footer>
+  <span>Marco Gallinaro &mdash; DOFS &amp; biomedical instrumentation</span>
+  <span id="year"></span>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+<script src="assets/interactions.js"></script>
+</body>
+</html>
